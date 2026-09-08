@@ -1,5 +1,11 @@
 # OT Sentinel Lite
 
+[![CI](https://github.com/Jayandra10/ot-sentinel-lite/actions/workflows/ci.yml/badge.svg)](https://github.com/Jayandra10/ot-sentinel-lite/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/Jayandra10/ot-sentinel-lite?display_name=tag)](https://github.com/Jayandra10/ot-sentinel-lite/releases)
+[![License](https://img.shields.io/github/license/Jayandra10/ot-sentinel-lite)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.11%2B-3776AB?logo=python&logoColor=white)](requirements.txt)
+[![Last Commit](https://img.shields.io/github/last-commit/Jayandra10/ot-sentinel-lite)](https://github.com/Jayandra10/ot-sentinel-lite/commits/main)
+
 OT Sentinel Lite is a small, lab-only OT/ICS portfolio project that correlates:
 
 - Malcolm/Zeek-style PLC network-session evidence,
@@ -165,6 +171,10 @@ Use these documents based on your goal:
 4. Keep generated outputs out of Git unless they are explicit test fixtures.
 
 See `CONTRIBUTING.md` for the full workflow and pull request checklist.
+
+## Release template
+
+Use `.github/RELEASE_TEMPLATE.md` when drafting a GitHub release so each release includes highlights, evidence changes, compatibility notes, and validation details in a consistent format.
 
 ## License
 
