@@ -1,0 +1,8 @@
+{
+  "plc": "PLC01",
+  "runtime": "CODESYS V3",
+  "application": "PackagingLine",
+  "source": "synthetic-realistic-demo",
+  "snapshot": "baseline",
+  "jam_timeout_s": 5
+}

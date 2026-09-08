@@ -1,0 +1,46 @@
+dataset,column,data_type,unit,description,normal_behavior,incident_behavior
+process_telemetry,timestamp,datetime,UTC,One-second telemetry timestamp.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,line_state,category,,PLC process state.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,conveyor_run,boolean,,Conveyor run command/state.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,safety_ok,boolean,,Synthetic safety-chain health; never altered by the incident.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,estop,boolean,,Emergency-stop state; always false in this scenario.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,jam_sensor,boolean,,Carton accumulation/jam input.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,fault_lamp,boolean,,PLC fault indication.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,fault_code,category,,PLC diagnostic code.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,jam_timeout_s,integer,seconds,Configured jam persistence before a fault.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,speed_setpoint_pct,number,%,Commanded conveyor speed.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,actual_speed_pct,number,%,Measured/simulated conveyor speed.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,motor_current_a,number,A,Drive motor current.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,vibration_mm_s,number,mm/s,Motor/gearbox vibration velocity.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,temperature_c,number,deg C,Drive/motor temperature.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,line_rate_ppm,number,packages/min,Packaging throughput.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,item_count,integer,packages,Cumulative processed count.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,reject_count,integer,packages,Cumulative reject count.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,reject_rate_pct,number,%,Instantaneous simulated reject rate.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,plc_cycle_ms,number,ms,PLC task-cycle duration.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,network_rx_kbps,number,kbps,PLC receive throughput.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,network_tx_kbps,number,kbps,PLC transmit throughput.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+process_telemetry,ground_truth_label,category,,Known scenario phase used only for evaluation.,Stable production with planned stops and short non-tripping disturbances.,"Recon, download, timeout change, jam impact, delayed fault, and recovery are labelled."
+network_sessions,timestamp,text,,Network-session start time.,"Known HMI, historian, and sparse engineering sessions.","New source, failed scan connections, and high-volume CODESYS download sessions."
+network_sessions,src_ip,text,,Source host address.,"Known HMI, historian, and sparse engineering sessions.","New source, failed scan connections, and high-volume CODESYS download sessions."
+network_sessions,dst_ip,text,,Destination PLC address.,"Known HMI, historian, and sparse engineering sessions.","New source, failed scan connections, and high-volume CODESYS download sessions."
+network_sessions,src_port,number,,Source transport port.,"Known HMI, historian, and sparse engineering sessions.","New source, failed scan connections, and high-volume CODESYS download sessions."
+network_sessions,dst_port,number,,PLC destination port.,"Known HMI, historian, and sparse engineering sessions.","New source, failed scan connections, and high-volume CODESYS download sessions."
+network_sessions,proto,text,,Transport protocol.,"Known HMI, historian, and sparse engineering sessions.","New source, failed scan connections, and high-volume CODESYS download sessions."
+network_sessions,service,text,,Normalized service label.,"Known HMI, historian, and sparse engineering sessions.","New source, failed scan connections, and high-volume CODESYS download sessions."
+network_sessions,duration,number,,Session duration.,"Known HMI, historian, and sparse engineering sessions.","New source, failed scan connections, and high-volume CODESYS download sessions."
+network_sessions,orig_bytes,number,,Originator-to-PLC bytes.,"Known HMI, historian, and sparse engineering sessions.","New source, failed scan connections, and high-volume CODESYS download sessions."
+network_sessions,resp_bytes,number,,PLC-to-originator bytes.,"Known HMI, historian, and sparse engineering sessions.","New source, failed scan connections, and high-volume CODESYS download sessions."
+network_sessions,conn_state,text,,Zeek-style normalized connection outcome.,"Known HMI, historian, and sparse engineering sessions.","New source, failed scan connections, and high-volume CODESYS download sessions."
+network_sessions,suricata_alert,text,,Synthetic alert overlap indicator.,"Known HMI, historian, and sparse engineering sessions.","New source, failed scan connections, and high-volume CODESYS download sessions."
+network_sessions,programming_activity,text,,Ground-truth download-window indicator.,"Known HMI, historian, and sparse engineering sessions.","New source, failed scan connections, and high-volume CODESYS download sessions."
+ground_truth,timestamp,text,,Incident timeline field.,Not applicable.,Documents the scenario and expected evidence.
+ground_truth,event_id,text,,Incident timeline field.,Not applicable.,Documents the scenario and expected evidence.
+ground_truth,event_type,text,,Incident timeline field.,Not applicable.,Documents the scenario and expected evidence.
+ground_truth,actor,text,,Incident timeline field.,Not applicable.,Documents the scenario and expected evidence.
+ground_truth,asset,text,,Incident timeline field.,Not applicable.,Documents the scenario and expected evidence.
+ground_truth,severity,text,,Incident timeline field.,Not applicable.,Documents the scenario and expected evidence.
+ground_truth,label,text,,Incident timeline field.,Not applicable.,Documents the scenario and expected evidence.
+ground_truth,description,text,,Incident timeline field.,Not applicable.,Documents the scenario and expected evidence.
+ground_truth,expected_network_signal,text,,Incident timeline field.,Not applicable.,Documents the scenario and expected evidence.
+ground_truth,expected_process_signal,text,,Incident timeline field.,Not applicable.,Documents the scenario and expected evidence.

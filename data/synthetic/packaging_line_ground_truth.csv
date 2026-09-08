@@ -1,0 +1,12 @@
+timestamp,event_id,event_type,actor,asset,severity,label,description,expected_network_signal,expected_process_signal
+2026-09-01T14:00:00+00:00,GT-001,baseline_start,Operator,PLC01,INFO,NORMAL,Packaging line enters stable automatic production.,Known HMI/historian polling only.,Process values remain within baseline.
+2026-09-01T14:10:00+00:00,GT-002,new_source,Maintenance laptop,PLC01,MEDIUM,SUSPICIOUS_RECON,Previously unseen maintenance laptop contacts PLC services.,New source IP appears.,No immediate process effect.
+2026-09-01T14:10:05+00:00,GT-003,scan_like,Maintenance laptop,PLC01,MEDIUM,SUSPICIOUS_RECON,Narrow multi-port connection sweep targets the PLC.,"High connection count, port diversity, and failed states.",No immediate process effect.
+2026-09-01T14:12:30+00:00,GT-004,program_download,Engineering workstation,PLC01,HIGH,PLC_CHANGE,CODESYS project download begins.,Programming ports and unusually large transfers.,PLC cycle and network throughput increase.
+2026-09-01T14:13:00+00:00,GT-005,parameter_change,Engineering workstation,PLC01,HIGH,POST_CHANGE,Jam_Timeout changes from 5 seconds to 20 seconds.,Programming session ends.,jam_timeout_s changes from 5 to 20.
+2026-09-01T14:13:00+00:00,GT-006,artifact_change,ICSpector simulator,PLC01,HIGH,POST_CHANGE,Synthetic PLC forensic snapshot differs from baseline.,Not a packet-only finding.,Configuration value differs.
+2026-09-01T14:15:00+00:00,GT-007,jam_begins,Packaging process,PLC01,HIGH,PROCESS_IMPACT,Carton accumulation activates the jam sensor.,Ordinary HMI/historian traffic continues.,Current and vibration rise while speed and throughput fall.
+2026-09-01T14:15:05+00:00,GT-008,expected_baseline_trip,Reference logic,PLC01,HIGH,PROCESS_IMPACT,Baseline five-second timeout would have faulted here.,No separate network signal.,Controller continues because timeout is now 20 seconds.
+2026-09-01T14:15:20+00:00,GT-009,delayed_fault,PLC01,PLC01,CRITICAL,PROCESS_IMPACT,Twenty-second jam timeout expires and the conveyor stops.,No separate network signal.,"Fault lamp, JAM_TIMEOUT, zero speed, and zero line rate."
+2026-09-01T14:18:00+00:00,GT-010,operator_reset,Operator,PLC01,MEDIUM,RECOVERY,Operator clears the jam and resets the line.,Normal polling continues.,Resetting and controlled restart sequence.
+2026-09-01T14:19:00+00:00,GT-011,production_restored,PLC01,PLC01,INFO,RECOVERY,Production returns to steady operation with the changed timeout still loaded.,Known communications only.,Line rate recovers; jam_timeout_s remains 20.

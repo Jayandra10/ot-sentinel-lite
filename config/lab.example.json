@@ -1,0 +1,33 @@
+{
+  "asset_name": "PLC01",
+  "plc_ip": "192.168.50.20",
+  "engineering_ip": "192.168.50.10",
+  "hmi_ip": "192.168.50.11",
+  "historian_ip": "192.168.50.12",
+  "rogue_ip": "192.168.50.50",
+  "malcolm_ip": "192.168.50.30",
+  "baseline_sources": [
+    "192.168.50.10",
+    "192.168.50.11",
+    "192.168.50.12"
+  ],
+  "programming_ports": [
+    11740,
+    1217
+  ],
+  "normal_conn_states": [
+    "SF"
+  ],
+  "window_seconds": 60,
+  "scan_unique_port_threshold": 4,
+  "scan_connection_threshold": 20,
+  "anomaly_threshold": 75,
+  "risk_points": {
+    "new_source": 20,
+    "scan_like": 15,
+    "ai_anomaly": 15,
+    "suricata_alert": 10,
+    "programming_activity": 15,
+    "plc_artifact_change": 25
+  }
+}
