@@ -17,6 +17,50 @@ The repository starts with synthetic evidence so the complete software path can 
 
 > Lab use only. Never scan, extract from, or modify a production, employer, campus, or third-party PLC. The synthetic demo performs no network activity.
 
+## Why this project exists
+
+Industrial environments often monitor process values and network security separately. That separation can delay detection when a low-noise engineering change causes downstream physical disruption minutes later.
+
+OT Sentinel Lite was created to demonstrate a safer, more explainable way to connect those dots:
+
+- Network behavior answers who communicated with the controller and when.
+- PLC artifact diffs answer what changed in controller-facing logic or configuration.
+- Process telemetry answers whether that change had real operational consequences.
+
+## Backstory: the synthetic incident
+
+The project simulates a packaging line where normal operations appear stable, then a short sequence of events unfolds:
+
+1. A new host appears and begins scan-like PLC communication.
+2. Engineering download activity is observed.
+3. A controller timeout parameter is changed from 5 seconds to 20 seconds.
+4. A jam condition develops, but the delayed timeout masks immediate faulting.
+5. Throughput drops while current and vibration rise, indicating process stress.
+
+Any one signal in isolation could be dismissed as noise. The goal of this project is to show why correlated evidence matters.
+
+## Problem and impact
+
+In real plants, delayed or missed recognition of controller tampering can lead to:
+
+- Extended downtime before root cause is identified
+- Increased scrap or quality drift during degraded operation
+- Maintenance overload from symptom-driven troubleshooting
+- Greater safety and reliability risk when protective timings are altered
+- Weak incident handoffs because security and controls teams lack shared evidence context
+
+This repository models that challenge in a controlled, lab-safe scenario so teams can rehearse detection and response logic without touching production assets.
+
+## Why this approach is beneficial
+
+OT Sentinel Lite focuses on practical benefits for learners, engineers, and reviewers:
+
+- Explainable scoring: every risk point is traceable to an explicit evidence rule.
+- Reproducible workflow: synthetic data allows repeatable validation and regression testing.
+- Cross-discipline visibility: process, network, and artifact evidence are presented together.
+- Safer adoption path: teams can validate analytics before integrating Raspberry Pi and live OT tooling.
+- Better decision support: timeline and milestone context make causal sequencing easier to communicate.
+
 ## What is implemented
 
 - Deterministic packaging-line process telemetry, network sessions, and labelled ground truth

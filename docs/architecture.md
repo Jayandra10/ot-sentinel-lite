@@ -9,6 +9,19 @@ This document explains how OT Sentinel Lite produces an explainable incident ass
 - Separate network behavior, PLC artifact integrity, and process impact signals.
 - Produce human-readable evidence that can be traced to source artifacts.
 
+## Problem context and impact
+
+OT incidents are often investigated in silos: security tooling captures network anomalies, controls tooling tracks PLC changes, and operations teams investigate process quality or downtime separately. When those streams are not correlated quickly, response time and confidence both degrade.
+
+This project models a common high-impact pattern: a subtle controller parameter change that does not immediately trip obvious alarms but later drives measurable process disruption. Even in a synthetic lab, the scenario demonstrates how missed causal linkage can increase downtime, scrap, and troubleshooting cost.
+
+## Why this architecture is useful
+
+- It ties each incident claim to concrete evidence artifacts.
+- It avoids opaque risk outputs by using explicit weighted triggers.
+- It supports staged adoption, starting with synthetic data and progressing to isolated hardware labs.
+- It gives mixed audiences (security, controls, operations) one shared incident narrative.
+
 ## System flowchart
 
 ```mermaid
