@@ -72,6 +72,16 @@ OT Sentinel Lite focuses on practical benefits for learners, engineers, and revi
 - Streamlit dashboard with an Overview tab for mixed audiences and a Details tab for drill-down
 - End-to-end pytest acceptance test
 
+## Model efficiency plots
+
+Static, GitHub-friendly model efficiency plots are available in `docs/plots/`.
+
+![Anomaly score distribution](docs/plots/model_efficiency_distribution.png)
+![Threshold efficiency trade-offs](docs/plots/model_efficiency_threshold_curves.png)
+![ROC-style trade-off curve](docs/plots/model_efficiency_roc_proxy.png)
+
+Use `python scripts/export_model_efficiency_plots.py` to regenerate these files.
+
 ## Workflow at a glance
 
 ```mermaid
@@ -202,6 +212,7 @@ Use these documents based on your goal:
 
 - `docs/README.md` - documentation index and reading order
 - `docs/architecture.md` - end-to-end architecture and flowchart
+- `docs/model-efficiency.md` - model efficiency plot explanations and regeneration command
 - `docs/repository-guide.md` - folder-by-folder and file-by-file guide
 - `docs/step-by-step.md` - staged progression from synthetic to hardware lab
 - `docs/demo-runbook.md` - repeatable demonstration checklist

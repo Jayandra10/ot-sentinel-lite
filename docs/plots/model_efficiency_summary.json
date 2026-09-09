@@ -1,0 +1,14 @@
+{
+  "configured_threshold": 75.0,
+  "normal_windows": 248,
+  "incident_windows": 65,
+  "false_alert_rate_at_threshold": 0.04032258064516129,
+  "detection_rate_at_threshold": 0.07692307692307693,
+  "best_f1_threshold": 15.0,
+  "best_f1": 0.38297872340425526,
+  "plots": [
+    "docs/plots/model_efficiency_distribution.png",
+    "docs/plots/model_efficiency_threshold_curves.png",
+    "docs/plots/model_efficiency_roc_proxy.png"
+  ]
+}

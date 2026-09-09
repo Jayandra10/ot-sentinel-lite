@@ -6,16 +6,18 @@ This folder documents the OT Sentinel Lite project from quick orientation to dee
 
 1. Start with `../README.md` for a project-level summary and quick start.
 2. Read `architecture.md` for complete data flow and component boundaries.
-3. Use `repository-guide.md` to locate code and artifacts quickly.
-4. Follow `step-by-step.md` for staged validation from synthetic data to hardware lab.
-5. Use `demo-runbook.md` to execute and present a repeatable demonstration.
-6. Use `pi-integration-plan.md` before replacing synthetic inputs with Raspberry Pi evidence.
+3. Read `model-efficiency.md` for static model-evaluation visuals and interpretation.
+4. Use `repository-guide.md` to locate code and artifacts quickly.
+5. Follow `step-by-step.md` for staged validation from synthetic data to hardware lab.
+6. Use `demo-runbook.md` to execute and present a repeatable demonstration.
+7. Use `pi-integration-plan.md` before replacing synthetic inputs with Raspberry Pi evidence.
 
 ## Document purpose
 
 | Document | Purpose |
 |---|---|
 | `architecture.md` | End-to-end pipeline architecture, risk logic summary, and flowchart |
+| `model-efficiency.md` | Model efficiency plots and threshold trade-off interpretation |
 | `repository-guide.md` | Folder-level and file-level navigation with responsibilities |
 | `step-by-step.md` | Controlled implementation sequence with safety gates |
 | `demo-runbook.md` | Demo checklist for repeatable lab execution |

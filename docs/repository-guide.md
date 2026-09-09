@@ -15,6 +15,7 @@ This guide maps each top-level folder to its role in the project.
 | `artifacts/icspector/` | Baseline and incident PLC snapshot artifacts and manifests |
 | `sample_output/` | Generated scoring, summary, and event outputs |
 | `docs/` | Project documentation and operational runbooks |
+| `docs/plots/` | Static model-efficiency plot images rendered directly on GitHub |
 | `tests/` | End-to-end regression checks |
 
 ## Core scripts and responsibilities
@@ -27,6 +28,7 @@ This guide maps each top-level folder to its role in the project.
 | `model/train_isolation_forest.py` | Trains on normal windows and scores incident windows |
 | `scripts/icspector_manifest.py` | Computes hash manifests and artifact deltas |
 | `scripts/correlate_events.py` | Produces explainable weighted event and incident summary |
+| `scripts/export_model_efficiency_plots.py` | Exports static model efficiency charts for README and docs |
 | `dashboard/app.py` | Displays outcomes through risk, timeline, trigger, and audit panels |
 
 ## Data flow landmarks
