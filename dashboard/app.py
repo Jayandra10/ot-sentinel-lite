@@ -18,7 +18,7 @@ MODEL_METRICS_PATH = OUTPUT_DIR / "model_metrics.json"
 TRIGGER_ORDER = [
     "new_source",
     "scan_like",
-    "ai_anomaly",
+    "ml_anomaly",
     "suricata_alert",
     "programming_activity",
     "plc_artifact_change",
@@ -27,7 +27,7 @@ TRIGGER_ORDER = [
 TRIGGER_LABELS = {
     "new_source": "Unseen source endpoint",
     "scan_like": "Scan behavior pattern",
-    "ai_anomaly": "Anomaly model threshold breach",
+    "ml_anomaly": "Anomaly model threshold breach",
     "suricata_alert": "IDS detection alert",
     "programming_activity": "PLC programming activity",
     "plc_artifact_change": "Controller artifact change",
@@ -37,7 +37,7 @@ TRIGGER_LABELS = {
 TRIGGER_SHORT_LABELS = {
     "new_source": "New source",
     "scan_like": "Scan pattern",
-    "ai_anomaly": "Model anomaly",
+    "ml_anomaly": "Model anomaly",
     "suricata_alert": "IDS alert",
     "programming_activity": "PLC programming",
     "plc_artifact_change": "Artifact change",

@@ -25,7 +25,7 @@
   "risk_points": {
     "new_source": 20,
     "scan_like": 15,
-    "ai_anomaly": 15,
+    "ml_anomaly": 15,
     "suricata_alert": 10,
     "programming_activity": 15,
     "plc_artifact_change": 25

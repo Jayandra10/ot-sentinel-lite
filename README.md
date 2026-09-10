@@ -240,5 +240,3 @@ This repository uses the MIT License. See `LICENSE`.
 - CODESYS Control for Raspberry Pi SL 4.22.0.0 was released August 18, 2026 and is available through the CODESYS Store/Installer. Confirm the package matching your IDE/runtime instead of copying a stale installer link: https://www.codesys.com/ecosystem/release-lifecycle/releases-updates/control-for-raspberry-pi-sl/
 - Malcolm's official quick start uses Ubuntu 24.04 as its example, requires Python 3.9+ for control scripts, and requires authentication setup before container-image pull: https://github.com/cisagov/Malcolm/blob/main/docs/quickstart.md
 - Microsoft ICSpector currently documents CODESYS V3 support, Python 3.9+, and Visual C++ 14.0 build tools. Inspect the checked-out plugin help for the exact current plugin/analyzer tokens: https://github.com/microsoft/ics-forensics-tools/blob/main/HowToGuide.md
-
-The Word guide supplied with this project was used as reference material. Its commands were not executed automatically.

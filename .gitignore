@@ -17,3 +17,4 @@ sample_output/*.csv
 sample_output/*.json
 outputs/
 screenshots/
+COPILOT_HANDOFF_PROMPT.md

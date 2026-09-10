@@ -101,7 +101,7 @@ def main() -> None:
         )
 
     anomaly_matches = windows.loc[windows["anomaly_score"] >= config["anomaly_threshold"]]
-    flags["ai_anomaly"] = not anomaly_matches.empty
+    flags["ml_anomaly"] = not anomaly_matches.empty
     if not anomaly_matches.empty:
         anomaly = anomaly_matches.sort_values("anomaly_score", ascending=False).iloc[0]
         events.append(
@@ -168,7 +168,7 @@ def main() -> None:
     reasons = [name for name, present in flags.items() if present]
     verdict = (
         "Correlated network anomaly and PLC artifact change require investigation."
-        if flags["ai_anomaly"] and flags["plc_artifact_change"]
+        if flags["ml_anomaly"] and flags["plc_artifact_change"]
         else "Evidence is incomplete; review individual signals."
     )
 
